@@ -1,0 +1,11 @@
+script.Parent.Triggered:Connect(function(player)
+	script.Parent.Parent.Parent.Parent.DriveSeat:Sit(player.Character.Humanoid)
+	
+	script.Parent.Parent.Parent.Parent.DriveSeat.Changed:Connect(function()
+		if script.Parent.Parent.Parent.Parent.DriveSeat.Occupant then
+			script.Parent.Enabled = false
+		else
+			script.Parent.Enabled = true
+		end
+	end)
+end)
